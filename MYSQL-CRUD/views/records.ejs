@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>All Records</title>
+  </head>
+  <body>
+    <a href="./create">ADD NEW</a>
+      <table border="3" width="95%">
+        <thead>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Address</td>
+          <td>Control</td>
+        </thead>
+        <% for(let i=0; i< users.length; i++){ %>
+        <tr>
+          <td><%= users[i].id %></td>
+          <td><%= users[i].name %></td>
+          <td><%= users[i].email %></td>
+          <td><%= users[i].address %></td>
+          <td> <ul>
+            <button class="correct"> <a href="./update">EDIT</a> </button>
+             <a href="./delete" data-id= <%= users[i].id %> >DELETE</a>
+          </ul>
+         </td>
+        </tr>
+        <% } %>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>READ CSV FILE</title>
+  </head>
+  <body>
+    <table border="3" width="95%">
+      <thead>
+        <td>SERIAL NUMBER</td>
+        <td>COMPANY NAME</td>
+        <td>Employee NAME</td>
+        <td>DESCRIPTION</td>
+      </thead>
+
+      <% persons.slice((id*1)*20-19,(id*1)*20).forEach(person=>{ %>
+      <tr>
+        <td><%= person['Serial Number'] %></td>
+        <td><%= person['Company Name'] %></td>
+        <td><%= person['Employee Markme'] %></td>
+        <td><%= person['Description'] %></td>
+      </tr>
+      <% }) %>
+    </table>
+    <a href=" <%= (id*1)-1 %> ">PREV</a>
+    <a href=" <%= (id*1)+1 %> ">NEXT</a>
+  </body>
+</html>
