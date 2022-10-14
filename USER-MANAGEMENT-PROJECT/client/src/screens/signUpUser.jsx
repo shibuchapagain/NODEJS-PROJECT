@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const signUpUser = ({ history }) => {
+const SignUpUser = ({ history }) => {
   const [fullName, setFullName] = useState("");
   //   const [email, setEmail] = useState("");
   //   const [role, setRole] = useState("");
@@ -28,15 +28,16 @@ const signUpUser = ({ history }) => {
         encType="multipart/form-data"
       >
         <form-Group controlId="fullName">
-          <form-Control
+          {/* <form-Control
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             type="text"
-          />
+          /> */}
+          <input type="text" placeholder="Full Name" />
         </form-Group>
       </form>
     </div>
   );
 };
 
-export default signUpUser;
+export default SignUpUser;
